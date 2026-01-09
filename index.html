@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
+    <title>Gabriel Villafuerte Villatoro- 12 Años</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Audio Player Control -->
+    <button id="audio-control" class="audio-btn" aria-label="Play Music">
+        <span>🎵</span>
+    </button>
+    <audio id="bg-music" loop autoplay>
+        <source src="assets/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="football-decoration">⚽</div>
+            <h1 class="animate-text">GABRIEL VILLAFUERTE VILLATORO</h1>
+            <h2 class="animate-text-delay">CUMPLE 12 AÑOS</h2>
+            <div class="hero-image-placeholder">
+                <!-- Can be replaced with a photo of Gabriel if provided later -->
+                <div class="jersey">
+                    <span class="jersey-number">12</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h3>FALTAN</h3>
+            <div id="countdown" class="countdown-timer">
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <label>DÍAS</label>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <label>HRS</label>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <label>MIN</label>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <label>SEG</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="details-section">
+            <div class="card">
+                <h3>FECHA Y HORA</h3>
+                <p class="highlight">Sábado 31 de Enero, 2026</p>
+                <p>1:00 PM - 5:00 PM</p>
+            </div>
+
+            <div class="card">
+                <h3>UBICACIÓN</h3>
+                <p>Condado Santa Rosa, Etapa 2</p>
+                <p>Calle Los Castaños, Casa 11</p>
+                <p>Santa Tecla, Casa Club de la Etapa 2</p>
+                <a href="https://waze.com/ul/hd42mzf18k&navigate=yes" target="_blank" class="btn waze-btn">
+                    🚙 Ir con Waze
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>DEPORTE</h3>
+                <p>¡Vayan listos para un partidito de fútbol!</p>
+                <p>Adultos y Niños ⚽🏃‍♂️</p>
+            </div>
+        </section>
+
+        <!-- Gift Section -->
+        <section class="gift-section">
+
+            <p>Muestras de cariño en sobre preferiblemente 💌</p>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section">
+
+            <a href="https://wa.me/50377864464?text=Hola,%20confirmo%20mi%20asistencia%20al%20cumplea%C3%B1os%20de%20Gabo!"
+                target="_blank" class="btn whatsapp-btn">
+                Confirmar asistencia por WhatsApp 💬
+            </a>
+        </section>
+
+        <!-- QR Code Section -->
+        <section class="qr-section">
+            <p>Escanea para ver la ubicación en Waze</p>
+            <div class="qr-container">
+                <img src="assets/qr.png" alt="Código QR Waze"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <div class="qr-fallback" style="display:none; border: 2px dashed #fff; padding: 20px;">QR Ubicación
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>¡TE ESPERAMOS!</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+:root {
+    --primary-green: #2e7d32;
+    --field-green: #4caf50;
+    --accent-gold: #ffd700;
+    --text-white: #ffffff;
+    --text-black: #1a1a1a;
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-green);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        repeating-linear-gradient(0deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.1) 50px,
+            rgba(255, 255, 255, 0.1) 52px);
+    color: var(--text-white);
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--accent-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 40px 0;
+    position: relative;
+}
+
+.football-decoration {
+    font-size: 4rem;
+    animation: bounce 2s infinite;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.hero-image-placeholder {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    background: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--accent-gold);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.jersey {
+    background: var(--text-black);
+    width: 140px;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+}
+
+.jersey-number {
+    font-size: 5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+/* Countdown */
+.countdown-section {
+    margin: 30px 0;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.time-unit {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 70px;
+    border: 1px solid var(--accent-gold);
+}
+
+.time-unit span {
+    display: block;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+.time-unit label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Details Cards */
+.card {
+    background: var(--card-bg);
+    color: var(--text-black);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--field-green);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.waze-btn {
+    background: #33ccff;
+    color: white;
+    text-shadow: none;
+    /* Ensure no conflict */
+}
+
+.waze-btn:hover {
+    background: #00aadd;
+    transform: scale(1.05);
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    font-size: 1.3rem;
+    /* Larger font */
+    padding: 18px 50px;
+    /* Larger padding */
+    border: 3px solid white;
+    /* Make it pop */
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    animation: pulse 2s infinite;
+    font-weight: 800;
+    /* Bolder */
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    animation: none;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(18, 140, 126, 0.6);
+}
+
+/* Gift Section */
+.envelope-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Audio Control */
+.audio-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    border: 4px solid #fff;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    animation: btn-pulse 2s infinite;
+}
+
+@keyframes btn-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+        transform: scale(1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+        transform: scale(1.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+        transform: scale(1);
+    }
+}
+
+.audio-btn:hover {
+    transform: rotate(360deg);
+}
+
+.qr-section img {
+    max-width: 200px;
+    border-radius: 10px;
+    border: 5px solid white;
+}
+
+/* Animations */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.animate-text {
+    animation: fadeInUp 1s ease-out;
+}
+
+.animate-text-delay {
+    animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .countdown-timer {
+        gap: 8px;
+    }
+
+    .time-unit {
+        min-width: 60px;
+        padding: 5px;
+    }
+
+    .time-unit span {
+        font-size: 1.5rem;
+    }
+}
